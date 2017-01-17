@@ -1,10 +1,6 @@
-package gameworld
+package systems
 
-import (
-	"time"
-	"github.com/20zinnm/ecs"
-	"github.com/20zinnm/smasaio/components"
-)
+import "time"
 
 type InputSystem struct {
 	world    *ecs.World
@@ -25,9 +21,4 @@ func (ic *InputSystem) Initialize(w *ecs.World) {
 
 func (ic *InputSystem) Update(dt time.Duration) {
 
-}
-
-type PhysicsSystem struct {
-	world    *ecs.World
-	entities []ecs.Entity
 }
