@@ -1,0 +1,18 @@
+[submodule "vendor/azul3d.org/native/cp.v1"]
+	path = vendor/azul3d.org/native/cp.v1
+	url = https://azul3d.org/native/cp.v1
+[submodule "vendor/github.com/20zinnm/ecs"]
+	path = vendor/github.com/20zinnm/ecs
+	url = https://github.com/20zinnm/ecs
+[submodule "vendor/github.com/20zinnm/intalloc"]
+	path = vendor/github.com/20zinnm/intalloc
+	url = https://github.com/20zinnm/intalloc
+[submodule "vendor/github.com/bradfitz/slice"]
+	path = vendor/github.com/bradfitz/slice
+	url = https://github.com/bradfitz/slice
+[submodule "vendor/go4.org"]
+	path = vendor/go4.org
+	url = https://github.com/camlistore/go4
+[submodule "vendor/github.com/gorilla/websocket"]
+	path = vendor/github.com/gorilla/websocket
+	url = https://github.com/gorilla/websocket

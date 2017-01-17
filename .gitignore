@@ -1,0 +1,9 @@
+.idea/
+*.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Thumbnails
+._*
+coverage.out
