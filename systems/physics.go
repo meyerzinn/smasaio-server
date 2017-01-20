@@ -1,13 +1,15 @@
 package systems
 
 import (
+	"azul3d.org/native/cp.v1"
 	"github.com/20zinnm/ecs"
 	"github.com/20zinnm/smasaio-server/components"
 )
 
 type PhysicsSystem struct {
-	world    *ecs.World
-	entities []ecs.Entity
+	gameworld *ecs.World
+	world     cp.Space
+	entities  []ecs.Entity
 }
 
 func (s *PhysicsSystem) Update(dt int) {

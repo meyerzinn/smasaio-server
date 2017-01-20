@@ -8,5 +8,5 @@ const (
 	Physics ecs.Component = 1 << iota
 	Input
 	Ship
-	Net
+	Player
 )

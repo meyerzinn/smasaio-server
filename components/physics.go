@@ -8,7 +8,7 @@ import (
 )
 
 type PhysicsData struct {
-	Body cp.Body
+	Body *cp.Body
 }
 
 func (pc PhysicsData) MarshalBinary() (data []byte, err error) {

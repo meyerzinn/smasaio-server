@@ -2,7 +2,7 @@ package systems
 
 import (
 	"github.com/20zinnm/ecs"
-	"github.com/20zinnm/smasaio/components"
+	"github.com/20zinnm/smasaio-server/components"
 )
 
 type NetworkingSystem struct {
@@ -10,8 +10,10 @@ type NetworkingSystem struct {
 	entities []ecs.Entity
 }
 
+func NewSystem()
+
 func (ns *NetworkingSystem) ComponentMask() uint64 {
-	return uint64(components.Net)
+	return uint64(components.Player)
 }
 
 func (ns *NetworkingSystem) Add(entity ecs.Entity) {
