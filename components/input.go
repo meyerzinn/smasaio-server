@@ -1,6 +1,6 @@
 package components
 
-type InputData struct {
+type InputComponent struct {
 	// Combat
 	Shooting  bool
 	Shielding bool
@@ -10,6 +10,8 @@ type InputData struct {
 	TurningLeft  bool
 	TurningRight bool
 }
+
+
 
 //func (ic *InputData) MarshalBinary() (data []byte, err error) {
 //	var encoded byte = 0

@@ -1,12 +1,14 @@
 package components
 
-import (
-	"github.com/20zinnm/ecs"
-)
+import "github.com/wooga/go-entitas"
 
 const (
-	Physics ecs.Component = 1 << iota
+	Physics      entitas.ComponentType = iota
 	Input
 	Ship
 	Player
+	Network
+	Regeneration
+
+	TOTAL
 )

@@ -4,24 +4,28 @@ import (
 	"bytes"
 	"encoding/binary"
 	"time"
+	"github.com/wooga/go-entitas"
 )
 
-const DelayBetweenShots = 3 * time.Second
+type ShipComponent struct {
+	LastShot          time.Time
+	DelayBetweenShots time.Duration
 
-type ShipData struct {
-	NextShot     time.Time
-	ShieldMillis uint32
-	ShipDamage   float32
-	Diamonds     uint16 // The amount of currency (diamonds) a ship has.
+	ShieldActive    bool
+	ShieldRemaining time.Duration
 }
 
-func (sc ShipData) MarshalBinary() (data []byte, err error) {
-	var buffer bytes.Buffer
-	var bools byte = 0
-	if time.Now().After(sc.NextShot) {
-		bools &= 1 << 1
-	}
-	buffer.WriteByte(bools)
-	binary.Write(buffer, binary.LittleEndian, sc.ShieldMillis)
-
+func (ShipComponent) Type() entitas.ComponentType {
+	return Ship
 }
+
+//func (sc ShipData) MarshalBinary() (data []byte, err error) {
+//	var buffer bytes.Buffer
+//	var bools byte = 0
+//	if time.Now().After(sc.NextShot) {
+//		bools &= 1 << 1
+//	}
+//	buffer.WriteByte(bools)
+//	binary.Write(buffer, binary.LittleEndian, sc.ShieldMillis)
+//
+//}

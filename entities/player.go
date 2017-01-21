@@ -1,9 +1,16 @@
 package entities
 
-import "github.com/20zinnm/ecs"
+import (
+	"github.com/gorilla/websocket"
+	"github.com/wooga/go-entitas"
+)
 
-func NewPlayer() *ecs.EntityContainer {
-	return ecs.NewEntityContainer(map[ecs.Component]interface{}{
+//
+//func NewPlayer() *ecs.EntityContainer {
+//	return ecs.NewEntityContainer(map[ecs.Component]interface{}{
+//
+//	})
+//}
 
-	})
+func NewPlayer(conn *websocket.Conn) {
 }
